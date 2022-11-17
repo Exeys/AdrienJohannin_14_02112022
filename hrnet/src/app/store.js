@@ -1,5 +1,5 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit'
-import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, REGISTER, PERSIST } from 'redux-persist'
+import { configureStore} from '@reduxjs/toolkit'
+import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, REGISTER, PERSIST, PURGE } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 const persistConfig = {
@@ -61,7 +61,7 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
-                ignoredActions: [FLUSH, REHYDRATE, PAUSE, REGISTER, PERSIST],
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, REGISTER, PERSIST, PURGE],
             },
         }),
 
