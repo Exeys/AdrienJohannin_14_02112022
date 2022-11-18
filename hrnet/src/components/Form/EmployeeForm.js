@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./EmployeeForm.css"
 
 import DatePicker from 'react-datepicker'
@@ -11,10 +11,8 @@ import Input from "../Input/Input";
 import { states, departments } from '../../datas.js'
 import Select from "../Select/Select";
 
-import useModal from "./useModal";
-import Modal from "./modal";
 
-
+import { Modal, useModal } from 'exeys-react-modal-custom'
 
 const EmployeeForm = () => {
 
@@ -29,11 +27,8 @@ const EmployeeForm = () => {
     const [department, setDepartment] = useState("")
 
     const dispatch = useDispatch()
-
-    const { isShowing: showModal, toggle: toggleModal } = useModal();
-
-    let form = document.getElementById("employeeForm")
-
+    
+        const { isShowing: showModal, toggle: toggleModal } = useModal();
 
     const createEmployee = (e) => {
         e.preventDefault()
@@ -59,8 +54,8 @@ const EmployeeForm = () => {
 
         <div className="EmployeeForm">
             <Modal
-                isShowing={showModal}
-                hide={toggleModal}
+                 isShowing={showModal}
+                 hide={toggleModal}
                 text="Employee Created!"
                 title="HRnet - Create Employee" />
             <form id="employeeForm" onSubmit={createEmployee}>
