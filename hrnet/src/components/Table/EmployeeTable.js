@@ -1,7 +1,11 @@
 import React from "react";
 import DataTable from 'react-data-table-component'
-import { useSelector } from "react-redux";
+import DataTableExtensions from "react-data-table-component-extensions";
+import 'react-data-table-component-extensions/dist/index.css';
 import './EmployeeTable.css'
+
+import { useSelector } from "react-redux";
+
 
 const columns = [
     {
@@ -44,16 +48,21 @@ const columns = [
 ]
 
 
-
 const EmployeeTable = () => {
     const state = useSelector((state) => state.employees)
-    console.log(state)
     return (
-        <DataTable
-            pagination
-            highlightOnHover
+        <DataTableExtensions
+            print={false}
+            export={false}
             columns={columns}
-            data={state} />
+            data={state}
+        >
+            <DataTable
+                pagination
+                highlightOnHover
+            />
+        </DataTableExtensions>
+
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+
 import "./EmployeeForm.css"
 
 import DatePicker from 'react-datepicker'
@@ -65,7 +66,7 @@ const EmployeeForm = () => {
                             <Input type="text" id="firstName" label="First Name" setter={setFirstName} />
                             <Input type="text" id="lastName" label="Last Name" setter={setLastName} />
                             <label htmlFor="date-of-birth">Date of Birth</label>
-                            <DatePicker selected={birthDate} onChange={(date) => setBirthDate(date)} />
+                            <DatePicker selected={birthDate} onChange={(date) => setBirthDate(date)} className="customDatePicker"/>
                             <label htmlFor="start-date">Start Date</label>
                             <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                             <Select setter={setDepartment} label="Department" id="department" data={departments} />
