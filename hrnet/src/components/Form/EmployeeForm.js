@@ -13,7 +13,7 @@ import { states, departments } from '../../datas.js'
 import Select from "../Select/Select";
 
 
-import { Modal, useModal } from 'exeys-react-modal-custom'
+import { Modal, useModal } from 'react-modal-custom-component'
 
 const EmployeeForm = () => {
 
