@@ -6,7 +6,9 @@ import './EmployeeTable.css'
 
 import { useSelector } from "react-redux";
 
-
+/**
+ * Init of the DataTables columns
+ */
 const columns = [
     {
         name: 'First Name',
@@ -47,7 +49,9 @@ const columns = [
     },
 ]
 
-
+/**
+ * A function that render DataTable component
+ */
 const EmployeeTable = () => {
     const state = useSelector((state) => state.employees)
     return (

@@ -1,7 +1,9 @@
 import React from "react";
 
 
-
+/**
+ * A function that render Input component with props parameter including label if necessary
+ */
 const Input = ({ id, label, type, setter}) => {
     return (
         <div>

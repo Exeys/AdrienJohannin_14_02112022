@@ -1,6 +1,9 @@
 import React from "react";
 
-
+/**
+ * A function that render Select with props parameter including label if necessary
+ * The data is mapped to create <option>
+ */ 
 const Select = ({ id,label, setter, data }) => {
     return (
 

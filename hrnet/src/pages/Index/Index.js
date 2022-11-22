@@ -2,6 +2,10 @@ import React from "react";
 import EmployeeForm from "../../components/Form/EmployeeForm";
 import { Link } from 'react-router-dom'
 import './Index.css'
+
+/**
+ * A component page for Index
+ */
 const Index = () => {
     return (
         <div className="Index">

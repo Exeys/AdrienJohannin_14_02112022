@@ -3,6 +3,10 @@ import EmployeeTable from "../../components/Table/EmployeeTable";
 import { Link } from "react-router-dom";
 import './Employees.css'
 
+
+/**
+ * A component page for Employees
+ */
 const Employees = () => {
 
     return (
